@@ -1,4 +1,5 @@
-set COMMAND=%~n0
-javac %COMMAND%.java
-java %COMMAND%
+chcp 65001
+set CLASS=%~n0
+javac %CLASS%.java
+java %CLASS%
 pause
