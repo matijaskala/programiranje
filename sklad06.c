@@ -5,19 +5,13 @@
 typedef struct _double_stack double_stack;
 struct _double_stack {
 	double st;
-	double_stack* n;
 	double_stack* p;
 };
 
 static void stack_push ( double_stack** s, double st ) {
 	double_stack* n = malloc ( sizeof(double_stack) );
-	n->n = NULL;
 	n->st = st;
 	n->p = *s;
-	if ( *s )
-		(*s)->n = n;
-	else
-		*s = n;
 	*s = n;
 }
 
