@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct _double_stack double_stack;
 struct _double_stack {
@@ -20,7 +21,7 @@ static void stack_push ( double_stack** s, double st ) {
 	*s = n;
 }
 
-static inline double stack_empty ( double_stack** s ) {
+static inline bool stack_empty ( double_stack** s ) {
 	return !*s;
 }
 
